@@ -1,0 +1,28 @@
+{
+	"task": "sun397_pe",
+	"dataset_root": "images",
+	"split_file_train": "partitions/Training_01.txt",
+	"split_file_test": "partitions/Testing_01.txt",
+	"hierarchy_file": "hierarchy.csv",
+	"base_model_file": "base_models/sun397_base_model_split01.pth.tar",
+	"criterion": "cross_entropy",
+	"epochs": 15,
+	"lr": 0.001,
+	"lr_decay": 0.1,
+	"lr_step": 5,
+	"momentum": 0.9,
+	"clip_gradient": -1,
+	"weight_decay": 5e-4,
+	"plugins": {
+	    "conv1": [3, 256, 256, 256, 64],
+	    "conv2": [3, 256, 256, 256, 192],
+	    "conv3": [3, 256, 256, 256, 384],
+	    "conv4": [3, 256, 256, 256, 256],
+	    "conv5": [3, 256, 256, 256, 256],
+		"linear1": [3, 256, 256, 256, 4096],
+		"linear2": [3, 256, 256, 256, 4096],
+		"linear3": [3, 256, 256, 256, 397]
+	},
+	"tag": "linear3_p10_split01",
+	"seed": 0
+}
