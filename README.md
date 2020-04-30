@@ -14,7 +14,7 @@ sun397/
 ├── base_models
 │   └── sun397_base_model_split01.pth.tar
 ├── hierarchy.csv
-├── images -> /home/michal/Datasets/SUN397/
+├── images -> /home/user/Datasets/SUN397/
 │   ├── a
 │   ├── b
 │   ├── c

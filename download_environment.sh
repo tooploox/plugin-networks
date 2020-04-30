@@ -12,11 +12,12 @@ curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${code
 tar xvf ${fileName}
 rm ${fileName}
 
-#TODO Download SUN397
-#if [[ -f SUN397.tar.gz ]]; then
-#    wget http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz
-#fi
-#
-#if [ ! -d ${WORKSPACE}/images ]; then
-#    #unpack
-#fi
+if [[ ! -f SUN397.tar.gz ]]; then
+    wget http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz
+fi
+
+if [[ ! -d ${WORKSPACE_DIR}/images ]]; then
+    tar xvf SUN397.tar.gz
+    mv SUN397 ${WORKSPACE_DIR}/images
+fi
+
