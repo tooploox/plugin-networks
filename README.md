@@ -69,7 +69,7 @@ The best idea is to add the code directory to `PYTHONPATH`
 eg. `export PYTHONPATH=plugin-networks:$PYTHONPATH`, as well as update `PATH`:
 `export PATH=plugin-networks/pluginnet:$PATH`.
 
-Now in `workspace/sun397` type `../../code_release/confs/SUN397/conf_pe.json output`
+Now in `workspace/sun397` type `train.py ../../code_release/confs/SUN397/conf_pe.json output`
 This runs the training script. The results will be saved in the `output` dir.
 Also `runs` directory will be created with TensorBoard output.
 
